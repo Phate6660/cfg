@@ -1,0 +1,23 @@
+### cfg ###
+A configuration manager that can also launch an external editor to modify them.
+
+## Known Working Stuff ##
+Editors:
+- NVim
+- Vim
+Terminals:
+- Alacritty
+- XTerm / UXTerm
+
+## Probably Works But Not Tested Yet ##
+- Editing root stuff with sudo
+
+## TODO ##
+- Add comments 
+  (NOTE: save this for when you're done drinking phate, your comments suck when drinking)
+- Add remove feature
+  (to stop managing a config)
+- Support more editors
+- Support more terminals
+- Work out any bugs/kinks found
+  (probably a lot I haven't seen)
