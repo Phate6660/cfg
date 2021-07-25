@@ -81,17 +81,19 @@ fn main() {
     let config_dir = Path::new(&raw_config_dir);
     functions::ensure_directory(config_dir);
 
-    let mut program = String::new();
-    print!("Please input the name of the program: ");
-    stdout().flush().unwrap();
-    stdin()
-        .read_line(&mut program)
-        .expect("Failed to read user input for the program [crate::main()]");
     let args = std::env::args().collect::<Vec<String>>();
     let operation = &args[1];
+    let mut program = String::new();
+    if operation.as_str() != "rem" {
+        print!("Please input the name of the program: ");
+        stdout().flush().unwrap();
+        stdin()
+            .read_line(&mut program)
+            .expect("Failed to read user input for the program [crate::main()]");
+    }
     match operation.as_str() {
         "add" => add(&raw_config_dir, program),
-        "rem" => println!("Used rem!"),
+        "rem" => println!("Used rem. Phate needs to implement me! >_<"),
         "mod" => modify(&raw_config_dir, program),
         _ => { 
             println!("Support operations are add, rem, and mod.");
